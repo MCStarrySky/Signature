@@ -1,0 +1,5 @@
+Plugin:
+  Prefix: "&9&lSignature"
+  INFO: "&a>> &r"
+  WARN: "&e>> &r"
+  ERROR: "&c>> &r"

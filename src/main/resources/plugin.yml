@@ -1,0 +1,10 @@
+name: Signature
+version: ${project.version}
+main: me.mical.signature.Signature
+api-version: 1.16
+authors:
+  - Mical
+  - EntityParrot_
+commands:
+  signature:
+    usage: /signature help

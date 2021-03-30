@@ -1,0 +1,45 @@
+Settings:
+  # Gui 标题.
+  Title: "{0} 的历史个性签名"
+  # Gui 行数.
+  Row: 6
+Items:
+  # 显示模板.
+  Template:
+    ItemStack:
+      Display: "&r个签"
+      Material: "BED"
+      Lore:
+        - ''
+        - '  &7左键对该个签「&3点赞&7」.'
+        - '  &7时间: &a{0}&7.'
+        - '  &7内容: &a{1}&7.'
+        - ''
+    LikeFirst: '  &7点赞列表:'
+    LikeEnd: ''
+    Like: '  &7- &a{0}&7 于 &b{1}&7.'
+    Position:
+      X: "1-9"
+      Y: "1-5"
+  Next:
+    ItemStack:
+      Display: "&r下一页"
+      Material: BOOK
+      Lore:
+        - ''
+        - '  &7点击翻到 &c下一页.'
+        - ''
+    Position:
+      X: "8"
+      Y: "6"
+  Previous:
+    ItemStack:
+      Display: "&r上一页"
+      Material: BOOK
+      Lore:
+        - ''
+        - '  &7点击翻到 &c上一页.'
+        - ''
+    Position:
+      X: "2"
+      Y: "6"

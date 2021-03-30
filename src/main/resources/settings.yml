@@ -1,0 +1,6 @@
+Language: Chinese
+bStats: false
+Debug: true
+EditCost: 50.0
+DefaultSignature: "这个人很懒, 还没有写签名."
+LengthLimit: 20
