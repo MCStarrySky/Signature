@@ -40,5 +40,6 @@ public final class Signature extends PPlugin {
         //if (ValidateUtil.unValidate()) {
         //   Bukkit.getPluginManager().disablePlugin(this);
         //}
+        registerStats(10859, null);
     }
 }
