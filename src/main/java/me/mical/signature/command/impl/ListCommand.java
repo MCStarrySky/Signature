@@ -20,12 +20,12 @@ public class ListCommand extends BaseCommand {
         describe("列出玩家的个签列表.");
         perm(".list");
 
-        addParam(CommandParam.player(0, "填入玩家名.", warn("玩家不在线或是不存在.")));
+        addParam(CommandParam.player(0, "填入玩家名.", strings -> warn("玩家不在线或是不存在.")));
     }
 
     @Override
     protected void call(String[] args) {
-        final Player target = (Player) convert(0, args);
+        final Player target = convert(0, args, Player.class);
         final PlayerData data = ParrotXAPI.getConfigManager(DataManager.class).get(target.getUniqueId().toString());
         final ListInventory inventory = new ListInventory(user, target);
         assert data != null;
