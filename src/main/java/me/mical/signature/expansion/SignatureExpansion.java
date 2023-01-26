@@ -17,5 +17,10 @@ public class SignatureExpansion extends BaseExpansion {
                 .parse((offlinePlayer, strings) ->
                         Objects.requireNonNull(ParrotXAPI.getConfigManager(DataManager.class).get(offlinePlayer.getUniqueId().toString())).getCurrent().getContent()
                 ).build());
+        addParam(PlaceholderParam.builder()
+                .name("likes")
+                .parse((offlinePlayer, strings) ->
+                        String.valueOf(Objects.requireNonNull(ParrotXAPI.getConfigManager(DataManager.class).get(offlinePlayer.getUniqueId().toString())).getCurrent().getLikes().size()))
+                .build());
     }
 }
