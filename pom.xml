@@ -121,9 +121,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.github.Polar-Pumpkin</groupId>
+            <groupId>com.github.MCStarrySky</groupId>
             <artifactId>ParrotX</artifactId>
-            <version>998c518862</version>
+            <version>333bf47903</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
