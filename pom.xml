@@ -123,7 +123,7 @@
         <dependency>
             <groupId>com.github.Polar-Pumpkin</groupId>
             <artifactId>ParrotX</artifactId>
-            <version>c55278a5f3</version>
+            <version>998c518862</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
