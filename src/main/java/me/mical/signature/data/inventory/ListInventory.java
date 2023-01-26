@@ -1,6 +1,7 @@
 package me.mical.signature.data.inventory;
 
 import me.mical.signature.Signature;
+import me.mical.signature.config.ConfigManager;
 import me.mical.signature.utils.StorageUtil;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -100,10 +101,17 @@ public class ListInventory extends PInventory<List<me.mical.signature.data.struc
 
         if (!signatureData.getLikes().isEmpty()) {
             lore.add(I18n.color(base.getItemMap().get("Template").getString("LikeFirst")));
-            signatureData.getLikes().forEach((uuid, aLong) -> {
+            int i = 1;
+            for (Map.Entry<UUID, Long> entry : signatureData.getLikes().entrySet()) {
                 final String result = base.getItemMap().get("Template").getString("Like");
-                lore.add(I18n.color(result, Bukkit.getOfflinePlayer(uuid).getName(), TimeUtil.getDefaultFormatDate(new Date(signatureData.getTimestamp()))));
-            });
+                lore.add(I18n.color(result, Bukkit.getOfflinePlayer(entry.getKey()).getName(), TimeUtil.getDefaultFormatDate(new Date(entry.getValue()))));
+                i++;
+                if (i == ConfigManager.max) {
+                    final String more = base.getItemMap().get("Template").getString("LikeMore");
+                    lore.add(I18n.color(more, signatureData.getLikes().size(), signatureData.getLikes().size() - i));
+                    break;
+                }
+            }
             lore.add(I18n.color(base.getItemMap().get("Template").getString("LikeEnd")));
         }
 

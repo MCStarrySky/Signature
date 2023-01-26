@@ -4,3 +4,4 @@ Debug: false
 EditCost: 50.0
 DefaultSignature: "这个人很懒, 还没有写签名."
 LengthLimit: 20
+Max: 5 # 最多显示多少位点赞者, 填写 -1 则为无限制.

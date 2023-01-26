@@ -23,6 +23,8 @@ public class ConfigManager extends PConfig {
     public static String defaultSignature;
     @PAutoload("LengthLimit")
     public static int lengthLimit;
+    @PAutoload("Max")
+    public static int max;
 
     public static ConfigManager getInstance() {
         if (Objects.isNull(instance)) {
